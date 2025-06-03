@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 withCredentials([string(credentialsId: 'SURGE_TOKEN', variable: 'TOKEN')]) {
-                    sh 'surge ./_build/ asirandy-practica.surge.sh --token $TOKEN'
+                    sh 'surge ./_build/ asirandy-taller2-jenkins.surge.sh --token $TOKEN'
                 }
             }
         }
